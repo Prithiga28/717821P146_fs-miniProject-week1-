@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <html>
+<head>
+   <title>Previous and Next Buttons: non-working on end positions</title>
+</head>
+<body>
+   <div id = "content" ></div>
+   <button id = "prev" > Previous </button>
+   <button id = "next" > Next </button>
+   <script>
+      var currentPosition = 0;
+      var maxPosition = 10;
+      updateContent();
+      document.getElementById("prev").addEventListener("click", function() {
+         if (currentPosition > 0) {
+            currentPosition--;
+            updateContent() ;
+         }
+      });
+      document.getElementById("next").addEventListener("click", function() {
+         if (currentPosition < maxPosition) {
+            currentPosition++;
+            updateContent() ;
+         }
+      });
+      function updateContent(){
+         // update UI or make API call here
+         var content = document.getElementById("content");
+         content.innerHTML = "Current Position: " + currentPosition + "<br> <br>" ;
+      }
+   </script>
+</body>
+</html>
+  <div class="container">
+    <h1>JS basics</h1>
+    <div id="quiz"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Submit</button>
+    <button id="retry" class="button hide">Retry</button>
+    <button id="showAnswer" class="button hide">Show Answer</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
